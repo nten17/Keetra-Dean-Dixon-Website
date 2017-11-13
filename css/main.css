@@ -1,0 +1,46 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.name-logo {
+  font-weight: 600;
+}
+
+/*============
+navigaiton
+============*/
+
+a:hover {
+  cursor: pointer;
+  color: #50E3C2;
+}
+
+a:active {
+  transform: translateY(2px);
+}
+
+.current {
+  color: #A53FFF;
+}
+
+nav {
+  font-weight: 600;
+}
+
+/*============
+content
+============*/
+
+.content-container {
+  background-color: #A53FFF;
+}
+
+.thumbnail {
+  width: 50%;
+  margin: -2.5rem;
+  transition: 100ms ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.5);
+}
