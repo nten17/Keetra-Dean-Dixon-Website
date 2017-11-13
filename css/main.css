@@ -10,6 +10,11 @@ body {
 navigaiton
 ============*/
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 a:hover {
   cursor: pointer;
   color: #50E3C2;
@@ -33,6 +38,8 @@ content
 
 .content-container {
   background-color: #A53FFF;
+  height: 80vh;
+  width: 65%;
 }
 
 .thumbnail {
@@ -42,5 +49,5 @@ content
 }
 
 .thumbnail:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
