@@ -21,7 +21,7 @@ a:hover {
 }
 
 a:active {
-  transform: translateY(2px);
+  transform: translateY(3px);
 }
 
 .current {
@@ -40,14 +40,69 @@ content
   background-color: #A53FFF;
   height: 80vh;
   width: 65%;
+  float: right;
+  margin: 3rem;
+  padding: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .thumbnail {
   width: 50%;
   margin: -2.5rem;
-  transition: 100ms ease;
+  transition: 200ms ease;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container {
+    background-color: #A53FFF;
+    height: auto;
+    width: 55%;
+    flex-wrap: wrap;
+    margin: 1.5rem;
+    padding: 3rem;
+  }
+  .thumbnail {
+    width: 100vw;
+    margin: -1rem;
+  }
 }
 
 .thumbnail:hover {
   transform: scale(1.3);
+}
+
+/*============
+About
+============*/
+
+.info {
+  color: white;
+  font-size: 14px;
+  line-height: 140%;
+  max-width: 600px;
+}
+
+/*============
+Projects
+============*/
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 150%;
+  padding-bottom: 1rem;
+}
+
+.description, .title {
+  color: white;
+}
+
+.paralink {
+  color: white;
+  text-decoration: underline;
 }
