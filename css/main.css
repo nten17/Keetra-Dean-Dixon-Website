@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'karla', sans-serif;
   max-width: 1000px;
 }
 
@@ -7,6 +7,11 @@ body {
 .name-logo {
   font-weight: 600;
   width: 250px;
+  line-height: 180%;
+}
+
+.nav-item {
+  line-height: 80%;
 }
 
 /*============
@@ -75,6 +80,17 @@ content
   padding: 3rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.empty {
+  background-color: none;
+  height: 80vh;
+  width: 100%;
+  float: right;
+  margin: 2.5rem;
+  padding: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -131,9 +147,10 @@ content
     margin: 1.5rem;
     padding: 2.5rem;
     width: 55%;
+    height: 100%;
   }
   .thumbnail {
-    width: 100vw;
+    width: 45vw;
   }
 }
 
@@ -168,7 +185,7 @@ About
   font-size: 14px;
   line-height: 140%;
   max-width: 600px;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 /*============
@@ -176,6 +193,7 @@ Projects
 ============*/
 .title, .title2, .title3 {
   animation: animation 2.4s cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite;
+  animation-iteration-count: 3;
 }
 
 .title {
@@ -216,10 +234,21 @@ Projects
   100% { transform: translate(0px, 10px) }
 }
 
+@media only screen (max-width: 600px) {
+  @keyframes animation {
+    from { transform: translate(0px, 10px) }
+    25%  { transform: translate(80px, -20px) }
+    50%  { transform: translate(50px, -10px) }
+    100% { transform: translate(0px, 10px) }
+  }
+}
+
+
 .description {
   font-size: 14px;
   line-height: 150%;
   padding-bottom: 1rem;
+  max-width: 450px;
 }
 
 .description, .title {
@@ -241,6 +270,8 @@ Projects
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 50vw;
+  max-width: 550px;
 }
 
 /*============
@@ -251,20 +282,19 @@ Boom Buzz
   /*animation: trail 2.4s cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite;*/
   animation: scale 600ms
   cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite alternate;
+  animation-iteration-count: 3;
+  line-height: 100%;
+  font-size: 30px;
 }
 
 .boom{
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   z-index: 20;
   margin: 0 auto;
 }
 
 .boom2 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.05s;
   opacity: 0.8;
   z-index: 19;
@@ -273,8 +303,6 @@ Boom Buzz
 
 .boom3 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.10s;
   opacity: 0.7;
   z-index: 18;
@@ -297,22 +325,20 @@ Boom Buzz
 Color
 ============*/
 .color, .color2, .color3 {
-  animation: jump 300ms cubic-bezier(0.250, 0.100, 0.250, 1.000) infinite alternate;
+  animation: jump 300ms cubic-bezier(0.50, 0.600, 0.80, 1.000) infinite alternate;
   position: relative;
+  animation-iteration-count: 10;
+  font-size: 30px;
 }
 
 .color{
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   z-index: 20;
   margin: 0 auto;
 }
 
 .color2 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.05s;
   opacity: 0.8;
   z-index: 19;
@@ -321,8 +347,6 @@ Color
 
 .color3 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.10s;
   opacity: 0.7;
   z-index: 18;
@@ -334,25 +358,30 @@ Color
   to { transform: translateY(-20px); }
 }
 
+@media only screen (max-width: 600) {
+  .color, .color2, .color3 {
+    font-size: 15px;
+  }
+}
+
 /*============
 Lettering
 ============*/
 .lettering, .lettering2, .lettering3 {
-  animation: shake 230ms linear infinite alternate;
+  animation: shake 600ms cubic-bezier(0.70, 0.900, 0.60, 1.000) infinite alternate ;
+  animation-iteration-count: 6;
+  font-size: 30px;
+  line-height: 120%;
 }
 
 .lettering{
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   z-index: 20;
   margin: 0 auto;
 }
 
 .lettering2 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.05s;
   opacity: 0.8;
   z-index: 19;
@@ -361,8 +390,6 @@ Lettering
 
 .lettering3 {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 130%;
   animation-delay: 0.10s;
   opacity: 0.7;
   z-index: 18;
